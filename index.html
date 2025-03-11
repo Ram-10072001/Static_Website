@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Music Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Basic styling for the portfolio */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .intro h2 {
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    /* Profile Image Section */
+    .profile-section {
+      text-align: center;
+      margin-top: 50px;
+      animation: slideIn 1.5s ease-out;
+      padding: 40px;
+      background-color: #333;
+      border-radius: 10px;
+      color: white;
+    }
+
+    .profile-section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .profile-section img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: scaleIn 2s ease-out;
+    }
+
+    /* Instrument Section */
+    .instruments {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .instrument-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 220px;
+      margin: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideIn 1s ease-out;
+    }
+
+    .instrument-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .instrument-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .instrument-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .instrument-card p {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes scaleIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Music Portfolio</h1>
+</header>
+
+<div class="container">
+  <section class="intro">
+    <h2>Welcome to My Musical Journey</h2>
+    <p>Explore my passion for music and the instruments that bring it to life. From the melodica to the guitar, flute, and harmonica, each instrument has its unique charm. Let’s dive in!</p>
+  </section>
+
+  <!-- Profile Section with Image from S3 Bucket -->
+  <section class="profile-section">
+    <h2>About Me</h2>
+    <img src="https://myterraformwebsite20250311.s3.ca-central-1.amazonaws.com/profile.png" alt="Profile Picture">
+    <p>Hello! I'm a passionate musician, blending different instruments to create unique and expressive music. Feel free to explore my portfolio and discover the sounds that define me.</p>
+  </section>
+
+  <section class="instruments">
+    <!-- Guitar Section -->
+    <div class="instrument-card">
+      <img src="https://via.placeholder.com/400x200.png?text=Guitar" alt="Guitar">
+      <h3>Guitar</h3>
+      <p>Feel the rhythm and soul of the guitar. A stringed instrument that adds depth and emotion to any piece of music.</p>
+    </div>
+
+    <!-- Flute Section -->
+    <div class="instrument-card">
+      <img src="https://via.placeholder.com/400x200.png?text=Flute" alt="Flute">
+      <h3>Flute</h3>
+      <p>The flute brings a light and airy touch to music. Its high-pitched tone can soar with beauty in any ensemble.</p>
+    </div>
+
+    <!-- Melodica Section -->
+    <div class="instrument-card">
+      <img src="https://via.placeholder.com/400x200.png?text=Melodica" alt="Melodica">
+      <h3>Melodica</h3>
+      <p>The melodica combines keyboard and wind instruments. Its sound is both playful and expressive, perfect for various musical styles.</p>
+    </div>
+
+    <!-- Harmonica Section -->
+    <div class="instrument-card">
+      <img src="https://via.placeholder.com/400x200.png?text=Harmonica" alt="Harmonica">
+      <h3>Harmonica</h3>
+      <p>The harmonica is a small, portable instrument known for its bluesy sound and versatility across different genres.</p>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
